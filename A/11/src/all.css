@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  width: 100vw;
+  height:100vh;
+  display: flex;
+  justify-content:center;
+  align-items:center
+}
+body::before{
+  content:"Light Mode Test";
+}
+#cb{
+  appearance: none;
+}
+#cb::before{
+  content: 'light mode';
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+#cb:checked::before{
+  content: 'night mode';
+  color: white;
+}
+body:has(#cb:checked)::before{
+  content:"Night Mode Test";
+  background-color: black;
+  color: white;
+}
+body:has(#cb:checked){
+  content:"Night Mode Test";
+  background-color: black;
+  color: white;
+}

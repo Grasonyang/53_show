@@ -1,0 +1,20 @@
+.boxs{
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(16,1fr);
+  grid-template-rows: repeat(16,1fr);
+}
+.box{
+  border: 1px solid black;
+}
+.colors{
+  display: flex;
+}
+.colorbox{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid gray;
+}

@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  position: relative;
+}
+.imgs{
+  width: 100%;
+  display: flex;
+  justify-content:space-evenly;
+  align-items:center;
+}
+.imgs img{
+  height: 100px;
+}
+#lightbox{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  background-color: gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#lightbox img{
+  height: 400px;
+}
+.cls{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
