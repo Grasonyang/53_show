@@ -1,0 +1,41 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding:10px;
+  gap:10px;
+  width: 100vw;
+  height:100vh;
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:repeat(5,1fr);
+  grid-template-areas:"hd hd hd"
+  "na nb ad"
+  "nc nc ad"
+  "nc nc ad"
+  "ft ft ft";
+}
+.box{
+  border:2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+@media screen and (max-width:479.99px) {
+  body{
+    grid-template-columns:repeat(1,1fr);
+    grid-template-rows:repeat(11,1fr);
+    grid-template-areas:"hd"
+    "na"
+    "na"
+    "ad"
+    "ad"
+    "ad"
+    "nb"
+    "nb"
+    "nc"
+    "nc"
+    "ft";
+  }
+}

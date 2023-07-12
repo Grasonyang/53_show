@@ -1,0 +1,30 @@
+.box{
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+.cb{
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+}
+span{
+  font-size:40px;
+}
+.cb:checked{
+  transform: rotate(360deg);
+  transition:transform 0.3s ease-in-out;
+  border: 0px solid black;
+}
+.box:has(.cb:checked) span{
+  text-decoration:line-through;
+  color:gray;
+}
+.cb:checked:before{
+  content: "√";
+  font-size:40px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
