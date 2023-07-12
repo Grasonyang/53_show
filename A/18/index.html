@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/jquery-ui.css">
+  <link rel="stylesheet" href="src/all.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="boxs fu">
+    <div class="first">
+      <button onclick="$('#addchatform').dialog('open')">Join Chat</button>
+    </div>
+    <div class="second">
+      <h1></h1>
+      <div class="listname"></div>
+    </div>
+  </div>
+  <div class="boxs se">
+    <div class="first">
+
+    </div>
+    <div class="second">
+      <div style="width: 90%;height: 90vh;" class="chattttt"></div>
+      <div style="width: 90%;height: 10vh;">
+        <input type="text" id="chatttttt">
+        <button onclick="chats()">Send</button>
+      </div>
+    </div>
+  </div>
+  <div id="addchatform">
+    <input type="text" id="formname">
+    <button onclick="join()">Join chat</button>
+  </div>
+  <script src="src/jquery-3.6.4.min.js"></script>
+  <script src="src/jquery-ui.js"></script>
+  <script src="src/all.js"></script>
+</body>
+
+</html>

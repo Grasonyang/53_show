@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/jquery-ui.css">
+  <title>Document</title>
+</head>
+
+<body>
+  帳號: <input type="text" id="user"><br>
+  密碼: <input type="password" id="pwd"><br>
+  驗證碼: <br>
+  <input type="text" id="code"><br>
+  <button onclick="send()">送出</button>
+  <img src="code.php" alt="" style="height:200px;">
+  <script src="src/jquery-3.6.4.min.js"></script>
+  <script src="src/jquery-ui.js"></script>
+</body>
+<script>
+  function send() {
+    $.ajax({
+      type: "POST",
+      url: "data.php?call=0",
+      data: {
+        user: $("#user").val(),
+        pwd: $("#pwd").val(),
+        code: $("#code").val(),
+      },
+      success: function (e) {
+        alert(e)
+      },
+    });
+  }
+  setInterval(() => {
+    $.ajax({
+      type: "POST",
+      url: "data.php?call=1",
+      success: function (e) {
+      },
+    });
+  }, 3000);
+</script>
+
+</html>
