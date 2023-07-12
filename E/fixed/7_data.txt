@@ -1,0 +1,11 @@
+code data
+7
+cone
+cane
+lane
+lame
+dame
+dama
+data
+
+ans : 8

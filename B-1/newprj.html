@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/jquery-ui.css">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+    margin: 5px;
+  }
+</style>
+
+<body>
+  <div style="border:2px solid black;padding:10px;border-radius: 5px;">
+    <h2>畫布設定</h2>
+    <div class="box">
+      寬 : <input type="number" value="1280" id="neww">
+    </div>
+    <div class="box">
+      高 : <input type="number" value="720" id="newh">
+    </div>
+    <div class="box">
+      底色:
+      <input type="color" value="#ffffff" id="newcolor">
+    </div>
+    <button onclick="newprj()">新增</button>
+  </div>
+  <script src="src/jquery-3.6.4.min.js"></script>
+  <script src="src/jquery-ui.js"></script>
+</body>
+<script>
+  function newprj() {
+    let w = $("#neww").val() == "" ? '1280' : $("#neww").val();
+    let h = $("#newh").val() == "" ? '720' : $("#newh").val();
+    localStorage.setItem('prj', 'true');
+    localStorage.setItem('w', w);
+    localStorage.setItem('h', h);
+    localStorage.setItem('basecolor', $("#newcolor").val());
+    location.href = "index.html";
+  }
+</script>
+
+</html>

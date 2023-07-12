@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/jquery-ui.css">
+  <link rel="stylesheet" href="src/all.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="boxs action">
+    <button onclick="newprj()">新增專案</button>
+    <button onclick="lstep()">復原</button>
+    <button onclick="nstep()">重做</button>
+    <!-- <button></button> -->
+    <!-- <button></button> -->
+  </div>
+  <div class="boxs drawact">
+    <button onclick="selecttt()" id="slt">選取</button><br>
+    <hr>
+    <button onclick="bucket()">油漆桶</button>
+    <hr>
+    <h2>筆刷</h2>
+    粗細: <input type="range" id="drawidth" min="0" max="100"><br>
+    筆頭:
+    <select id="drashape">
+      <option value="butt">Butt</option>
+      <option value="round">Round</option>
+      <option value="square">Square</option>
+    </select>
+    <h2>調色盤</h2>
+    <div class="colorbox">
+      <input type="color" value="#ffffff" class="colorr">
+      <input type="color" value="#c3c3c3" class="colorr">
+      <input type="color" value="#585858" class="colorr">
+      <input type="color" value="#000000" class="colorr">
+      <input type="color" value="#ec1c24" class="colorr">
+      <input type="color" value="#fdeca6" class="colorr">
+      <input type="color" value="#fff200" class="colorr">
+      <input type="color" value="#0ed145" class="colorr">
+      <input type="color" value="#8cfffb" class="colorr">
+      <input type="color" value="#3f48cc" class="colorr">
+      <input type="color" value="#b83dba" class="colorr">
+      <input type="color" value="#ffaec8" class="colorr">
+      <input type="color" value="#88001b" class="colorr">
+      <input type="color" value="#ff7f27" class="colorr">
+      <input type="color" value="#b97a56" class="colorr">
+    </div>
+    <h2>上傳圖片</h2>
+    <input type="file" accept="image/jpeg,image/png" id="upl_img">
+    <h2>樣章</h2>
+    <ul class="seals">
+      <li><input type="file" accept="image/jpeg,image/png" id="upl_seal"></li>
+    </ul>
+  </div>
+  <div class="boxs canvas"></div>
+  <div class="boxs lists">
+    <h2>專案</h2>
+    <button onclick="addlayer('')">新增圖層</button>
+  </div>
+  <script src="src/jquery-3.6.4.min.js"></script>
+  <script src="src/jquery-ui.js"></script>
+  <script src="src/canvas.js"></script>
+  <script src="src/layer.js"></script>
+  <script src="src/object.js"></script>
+  <script src="src/all.js"></script>
+</body>
+
+</html>

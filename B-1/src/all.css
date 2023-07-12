@@ -1,0 +1,125 @@
+*{
+  box-sizing: border-box;
+  color: antiquewhite;
+}
+input{
+  color: black;
+}
+input[type='file']{
+  width: 70px;
+}
+button{
+  color: black;
+}
+select{
+  color: black;
+}
+option{
+  color: black;
+}
+ul{
+  padding-left: 20px;
+}
+body {
+  margin: 0;
+  padding: 10px;
+  gap: 10px;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 8fr;
+  grid-template-areas: "at at at""da ca li";
+  background-color: #565656;
+}
+::-webkit-scrollbar{
+  width: 2px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: black;
+}
+.boxs{
+  border: 2px solid black;
+}
+.action{
+  grid-area: at;
+}
+.drawact{
+  grid-area: da;
+}
+.colorbox{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(3,1fr);
+}
+.colorr{
+  width: 30px;
+  border: 2px solid black;
+}
+.seal{
+  margin: 2px;
+  border: 2px solid black;
+}
+.canvas{
+  grid-area: ca;
+  overflow: overlay;
+  position: relative;
+}
+.drawlayer{
+  position: absolute;
+}
+.drawcanvas{
+  position: absolute;
+}
+.object{
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.ctrlbox{
+  height: 5px;
+  width: 5px;
+  background-color: black;
+}
+.lt{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.rt{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.lb{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.rb{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.rotate{  
+  position: absolute;
+  left: 50%;
+  top: -20%;
+}
+.move{
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  cursor: move;
+}
+
+
+
+.lists{
+  grid-area: li;
+  overflow: overlay;
+}
+.layer{
+  border: 2px solid black;
+}
