@@ -1,0 +1,19 @@
+.boxs{
+  width: 100px;
+  height: 100px;
+  display: none;
+  grid-template-rows:repeat(11,1fr);
+  grid-template-columns:repeat(11,1fr);
+  border-radius: 50%;
+  border:2px solid black;
+  overflow: hidden;
+  position: absolute;
+}
+.box{
+  border: 1px solid black;
+}
+.colorr{
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+}
