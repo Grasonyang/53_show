@@ -1,0 +1,361 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: overlay;
+  overflow-x: hidden;
+}
+body{
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  
+}
+::-webkit-scrollbar{
+  width: 4px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: black;
+}
+header{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 1s ease-in;
+}
+header:hover{
+  background-color: hsla(37, 100%, 64%, 0.906);
+}
+header div{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header div h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+header div h1 img{
+  width: 80px;
+  height: 80px;
+  
+}
+header ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid;
+  outline: 0.5px solid;
+  border-image: linear-gradient(to right bottom,#ecffea, #ff8c40) 25;
+}
+header ul li{
+  background-color: transparent;
+  transition: background-color 1s ease-in-out;
+}
+header ul li:hover{
+  background-color :rgba(255, 241, 49, 0.811);
+}
+header ul li a img{
+  width: 150px;
+}
+#menu{
+  flex-grow: 1;
+  display: none;
+  margin-top: 100px;
+}
+#nenu_show{
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+#nenu_show div{
+  width: 100%;
+  border: 1px solid black;
+}
+
+
+
+
+
+
+
+main{
+  width: 100vw;
+  height: auto;
+}
+.slogan{
+  padding: 0px 15%;
+  width: inherit;
+  height: auto;
+  display: flex;
+  position: relative;
+  /* background-color: hsla(37, 100%, 64%, 0.906); */
+}
+.slogan .text{
+  width: 40%;
+  height: 70vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bolder;
+  font-size: 400%;
+}
+.slogan .img{
+  margin-left: 30%;
+  padding: 2px;
+  width: 70%;
+  height: 70vh;
+  background-image: url('image/1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid;
+  border-image: linear-gradient(to right,transparent,transparent,transparent,black) 1;
+}
+.vision{
+  margin: 5% 0%;
+  width: 100%;
+  height: 90vh;
+  padding: 2% 10%;
+  background-color: #fffdf0;
+}
+.vision .bac{
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  background-image: url('image/4.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* backdrop-filter: blur(100px); */
+  /* filter: blur(5px); */
+}
+.vision .bac .imgtext{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+.vision .bac .imgtext img{
+  width: 150vw;
+  border: 2px solid rgb(255, 128, 55);
+}
+.vision .bac .imgtext span{
+  margin: 5%;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #ffdca8;
+}
+.touchong{
+  margin: 5% 5%;
+  width: 90%;
+  height: auto;
+  padding: 2% 10%;
+  
+}
+.touchong  h2{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.touchong .touchongdiv{
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.touchong .boxs{
+  padding: 10px;
+  width: 22%;
+  height: auto;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+.touchong .boxs:hover{
+  background-color: #fff0c5;
+  border: 5px solid rgb(255, 196, 34);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.touchong .boxs img{
+  width: 100%;
+  border: 5px solid black;
+  transition: transform 1s ease-in-out;
+}
+.touchong .boxs:hover img:hover{
+  width: 100%;
+  /* transform: rotate(360deg); */
+  transform: rotateY(360deg);
+}
+.touchong .boxs span{
+  width: 20%;
+  word-wrap: break-word;
+}
+.aboutus{
+  padding: 20px;
+  background-color: #ffd642;
+  width: 100%;
+  text-align: center;
+}
+.aboutus div{
+  padding: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+@media screen and (min-width:770px) and (max-width:1200px){
+  header{
+    flex-direction: column;
+    width: 100vw;
+    
+  }
+  header div{
+    width: 100vw;
+  }
+  header ul{
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    margin: 10px 20px;
+  }
+  header ul li{
+    width: 100%;
+    text-align: center;
+  }
+  #nenu_show{
+    display: flex;
+  }
+  header:has(#menu:checked) ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slogan .text{
+    width: 50%;
+  }
+  .slogan .img{
+    margin-left: 20%;
+    width: 80%;
+  }
+  .vision{
+    margin: 5% 0%;
+    width: 100%;
+    height: 50%;
+    padding: 2% 10%;
+    background-color: #fffdf0;
+  }
+  .vision .bac .imgtext img{
+    width: 200vw;
+    border: 2px solid rgb(255, 128, 55);
+  }
+  .vision .bac .imgtext span{
+    font-size: 120%;
+  }
+}
+@media screen and (max-width:769px){
+  header{
+    flex-direction: column;
+    width: 100vw;
+    
+  }
+  header div{
+    width: 100vw;
+  }
+  header ul{
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    margin: 10px 20px;
+  }
+  header ul li{
+    width: 100%;
+    text-align: center;
+  }
+  #nenu_show{
+    display: flex;
+  }
+  header:has(#menu:checked) ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .slogan{
+    padding: 0px 10%;
+  }
+  .slogan .text{
+    margin-left: 10px;
+    width: 80%;
+    height: 50vh;
+    font-size: 350%;
+    color: rgb(225, 196, 172);
+  }
+  .slogan .img{
+    margin-left: 0;
+    width: 100%;;
+  }
+  .vision{
+    margin: 5% 0%;
+    width: 100%;
+    height: 100%;
+    padding: 2% 10%;
+    background-color: #fffdf0;
+  }
+  .vision .bac .imgtext{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+  .vision .bac .imgtext img{
+    width: 100%;
+    border: 2px solid rgb(255, 128, 55);
+  }
+  .vision .bac .imgtext span{
+    font-size: 100%;
+  }
+  .touchong .touchongdiv{
+    flex-direction: column;
+  }
+  .touchong .boxs{
+    width: 90%;
+  }
+  .aboutus div{
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+}
